@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+build/
+*.bin
+*.elf
+*.map
+*.log
+*.tmp
+*.pkl
+*.joblib
