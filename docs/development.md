@@ -10,6 +10,4 @@ This repository was assembled after the original project work. The stages below 
 6. **Data cleaning and training** — applied per-recording Isolation Forest cleaning, StandardScaler, train/test evaluation, and cross-validation.
 7. **Embedded deployment** — exported the Decision Tree and scaler parameters as C++ arrays and reproduced inference directly on the ESP32-S3.
 8. **Real-time stabilization** — added a stationary safeguard, majority voting, and state-change confirmation after live testing exposed differences between offline and deployed behavior.
-9. **Later experiments** — additional feature configurations were explored after the selected version; these are not presented as improvements unless validated.
-
-The main lesson was that high offline classification accuracy does not automatically imply equally reliable real-world embedded behavior. Label design, feature consistency between training and deployment, and temporal stabilization all mattered.
+9. **Later experiments** — additional feature configurations were explored after the selected version.

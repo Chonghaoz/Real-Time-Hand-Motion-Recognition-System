@@ -48,7 +48,7 @@ These are offline dataset results, not a claim of equivalent accuracy for arbitr
 
 ## Embedded deployment
 
-Instead of running a Python model on a host computer, the trained scikit-learn Decision Tree is exported into C++ arrays containing feature indices, thresholds, child-node indices, leaf flags, and predicted classes. StandardScaler mean/scale parameters are exported alongside the tree, allowing the ESP32-S3 to reproduce the preprocessing and tree traversal locally without cloud inference.
+The trained scikit-learn Decision Tree is exported into C++ arrays containing feature indices, thresholds, child-node indices, leaf flags, and predicted classes. StandardScaler mean/scale parameters are exported alongside the tree, allowing the ESP32-S3 to reproduce the preprocessing and tree traversal locally without cloud inference.
 
 The runtime then applies a 3-prediction majority vote and requires repeated confirmation before changing the stable displayed state. The round TFT shows an animated visual for the current action.
 
@@ -111,5 +111,3 @@ Arduino-side dependencies include `Wire`, `SPI`, and `TFT_eSPI`. The QMI8658 reg
 ## Project status and provenance
 
 This repository documents a previously completed teaching/research project and was organized for publication after the original development work. The repository therefore does **not** fabricate historical Git commits. [`docs/development.md`](docs/development.md) records the real development stages based on the surviving project files and experiments.
-
-A later 17-feature configuration was explored while investigating real-time generalization, but it is not used as the main version here because later does not necessarily mean better validated.
